@@ -1,0 +1,5 @@
+
+- name: Role de Instalacao do Puppet
+  hosts: all
+  roles: 
+   - puppet

@@ -1,0 +1,4 @@
+- name: Role de Instalacao Web Server
+  hosts: all
+  roles:
+   - confWeb 

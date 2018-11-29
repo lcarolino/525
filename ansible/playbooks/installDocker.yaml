@@ -1,0 +1,8 @@
+- name: Instalacao do Docker no Ubuntu
+  hosts: docker
+  tasks:
+   - name: download do script de Instalacao
+     shell: "curl -fsSL https://get.docker.com -o get-docker.sh"
+
+   - name: Executando script de instalacao
+     shell: "sudo sh get-docker.sh"

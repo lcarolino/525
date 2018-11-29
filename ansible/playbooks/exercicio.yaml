@@ -1,0 +1,34 @@
+---
+
+- name: Exercicio Playbook
+  hosts: all
+  vars:
+   seunome: luciano
+  tasks:
+   - name: criando  usuarios
+     user:
+      name: "{{item}}"
+     with_items:
+      - "{{seunome}}"
+      - developer
+      - devops
+
+   - name: Instalando os pacotes basicos
+     package:
+      name: # "{{item}}"
+     #with_items: nao eh necessario ao usar packege
+       - htop
+       - vim
+       - cowsay
+       - figlet
+
+   - name: Copiando Arquivo DEVOPS para todas as maquinas
+     copy:
+      src: devops
+      dest: /srv/
+
+   - name: Copiando arquivo Index apenas para Automation
+     copy:
+      src: index
+      dest: /srv/
+     when: ansible_hostname == "automation" 
