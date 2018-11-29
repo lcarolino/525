@@ -1,4 +1,0 @@
-- name: enviando arquivos do Site para os servidores
-  template:
-   src: templates/index
-   dest: /var/www/html/index.html

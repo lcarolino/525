@@ -1,7 +1,0 @@
----
-# tasks file for confWeb
-- name: playbook de instalacao Web Server Apache
-  include: install_web.yaml
-
-- name: Copia conteudo para Servidores
-  include: copiaSite.yaml
